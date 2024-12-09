@@ -1,4 +1,25 @@
-.hello {
-  color: red;
-  font-family: "MyFont";
+.outer-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-container {
+  align-self: flex-end;
+  margin-right: 5vw;
+}
+
+.btn-container > button {
+  border: none;
+  margin-bottom: 3px;
+}
+
+.image-carousel {
+  color: pink;
+  border: 1px solid black;
+  width: 90vw;
+  height: 200px;
 }
