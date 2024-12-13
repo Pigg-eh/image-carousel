@@ -20,6 +20,15 @@
 .image-carousel {
   color: pink;
   border: 1px solid black;
-  width: 90vw;
+  /* width: 90vw; */
+  width: 600px;
   height: 200px;
+  display: flex;
+}
+
+.imageContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border: 1px solid red;
 }
