@@ -1,3 +1,5 @@
+import addListeners from "./buttonListeners";
+
 function pullImages(images) {
   console.log(images);
   for (let img of images) {
@@ -7,6 +9,7 @@ function pullImages(images) {
     container.appendChild(div);
     const imgNode = new Image();
     imgNode.src = img;
+    console.log("imgNode");
     console.log(imgNode);
     div.appendChild(imgNode);
   }

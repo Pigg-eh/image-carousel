@@ -1,5 +1,6 @@
 import "./style.css";
 import pullImages from "./insertImages";
+import addBtnListeners from "./buttonListeners";
 
 function importImg(r) {
   return r.keys().map(r);
@@ -10,3 +11,4 @@ const images = importImg(
 );
 
 pullImages(images);
+addBtnListeners();
