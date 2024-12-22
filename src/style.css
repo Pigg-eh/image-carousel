@@ -33,5 +33,12 @@
   width: 100%;
   border: 1px solid red;
 }
+/* image carousing */
+.visible {
+  visibility: visible;
+}
 
+.hidden {
+  visibility: hidden;
+}
 /* Button listener styles */
