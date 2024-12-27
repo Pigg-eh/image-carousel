@@ -1,7 +1,7 @@
 function transitionImages(index) {
   const firstImg = document.querySelector(`img[data = '${index}']`);
-  firstImg.classList.toggle("hidden");
-  firstImg.classList.toggle("visible");
+  firstImg.classList.toggle("inactive");
+  firstImg.classList.toggle("active");
 }
 
 export default transitionImages;

@@ -7,7 +7,7 @@ function pullImages(images) {
   for (let img of images) {
     const div = document.createElement("div");
 
-    div.classList.add("imageContainer");
+    div.classList.add("slide");
 
     let container = document.querySelector("div.image-carousel");
 
@@ -17,11 +17,11 @@ function pullImages(images) {
     imgNode.setAttribute("data", i);
     i++;
 
-    imgNode.classList.add("hidden");
+    imgNode.classList.add("inactive");
     div.appendChild(imgNode);
   }
 
-  transitionImages(1);
+  transitionImages(0);
 }
 
 export default pullImages;
