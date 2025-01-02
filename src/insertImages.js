@@ -17,11 +17,11 @@ function pullImages(images) {
     imgNode.setAttribute("data", i);
     i++;
 
-    imgNode.classList.add("inactive");
+    // imgNode.classList.add("inactive");
     div.appendChild(imgNode);
   }
 
-  transitionImages(0);
+  transitionImages();
 }
 
 export default pullImages;

@@ -1,7 +1,35 @@
-function transitionImages(index) {
-  const firstImg = document.querySelector(`img[data = '${index}']`);
-  firstImg.classList.toggle("inactive");
-  firstImg.classList.toggle("active");
+let index = 1;
+function slidePlus(n) {
+  transitionImages((index += n));
+}
+
+function slideCurrent(n) {
+  transitionImages((index = n));
+}
+
+function transitionImages(n) {
+  let i;
+  console.log(`slide ${n}`);
+  const slides = document.getElementsByClassName("slide");
+
+  if (n > slides.length) {
+    index = 1;
+  }
+  if (n < 1) {
+    index = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  if (index > slides.length) {
+    index = 1;
+  }
+
+  slides[index - 1].style.display = "flex";
+  setTimeout(index, 5000); //5 seconds change
 }
 
 export default transitionImages;
+export { slidePlus, slideCurrent };

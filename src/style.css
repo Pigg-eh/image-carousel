@@ -5,6 +5,8 @@
   align-self: center;
   justify-self: center;
   flex-direction: column;
+  position: relative;
+  margin: auto;
 }
 
 .btn-container {
@@ -18,35 +20,21 @@
 
 .image-carousel {
   border: 1px solid black;
-  /* width: 600px;
-  height: 200px; */
+  width: 600px;
+  height: 200px;
 
   width: 100%;
   display: flex;
-  overflow: hidden;
+  overflow: inherit;
   /* overflow-x: scroll; */
   scroll-snap-type: x mandatory;
 }
 
 .slide {
-  /* overscroll-behavior: contain; */
-
-  display: flex;
+  display: none;
   flex: 1 0 auto;
   justify-content: center;
   height: 100%;
   width: 100%;
   border: 1px solid red;
 }
-
-/* image carousing */
-
-/* .active {
-  visibility: visible;
-}
-
-.inactive {
-  visibility: hidden;
-} */
-
-/* Button listener styles */
