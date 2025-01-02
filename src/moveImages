@@ -1,5 +1,6 @@
 let index = 1;
-function slidePlus(n) {
+let timeoutId;
+function slidePlus(n = 1) {
   transitionImages((index += n));
 }
 
@@ -24,11 +25,14 @@ function transitionImages(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  console.log(`index ${index}`);
   slides[index - 1].style.display = "flex";
   dots[index - 1].className += " active";
 
-  // setTimeout(index, 2000); //2 seconds change
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+  }
+
+  timeoutId = setTimeout(slidePlus, 5000);
 }
 
 export default transitionImages;

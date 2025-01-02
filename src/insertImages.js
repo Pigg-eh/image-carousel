@@ -2,8 +2,6 @@ import transitionImages from "./moveImages";
 import { slideCurrent, index } from "./moveImages";
 
 function pullImages(images) {
-  console.log("image array");
-  console.log(images);
   let i = 0;
   for (let img of images) {
     const div = document.createElement("div");
