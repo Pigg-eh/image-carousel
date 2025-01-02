@@ -1,4 +1,5 @@
 import transitionImages from "./moveImages";
+import { slideCurrent } from "./moveImages";
 
 function pullImages(images) {
   console.log("image array");
@@ -14,11 +15,17 @@ function pullImages(images) {
     container.appendChild(div);
     const imgNode = new Image();
     imgNode.src = img;
-    imgNode.setAttribute("data", i);
+    // imgNode.setAttribute("data", i);
     i++;
 
     // imgNode.classList.add("inactive");
     div.appendChild(imgNode);
+
+    const dotsContainer = document.querySelector(".dots-container");
+    const span = document.createElement("span");
+    dotsContainer.appendChild(span);
+    span.setAttribute("data", i);
+    span.classList.add("dot");
   }
 
   transitionImages();

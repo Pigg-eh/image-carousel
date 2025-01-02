@@ -1,4 +1,4 @@
-import { slidePlus, slideCurrent } from "./moveImages";
+import { slidePlus, slideCurrent, index } from "./moveImages";
 
 function addBtnListeners() {
   const backBtn = document.querySelector("button.back");
@@ -8,5 +8,13 @@ function addBtnListeners() {
   backBtn.addEventListener("click", () => slidePlus(-1));
   allBtn.addEventListener("click", () => console.log("all logic"));
   nextBtn.addEventListener("click", () => slidePlus(1));
+
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((element) => {
+    let number = element.getAttribute("data");
+    // console.log(number);
+    element.addEventListener("click", () => slideCurrent(number));
+  });
 }
+
 export default addBtnListeners;
