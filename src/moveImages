@@ -24,7 +24,7 @@ function transitionImages(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-
+  console.log(`index ${index}`);
   slides[index - 1].style.display = "flex";
   dots[index - 1].className += " active";
 

@@ -1,5 +1,5 @@
 import transitionImages from "./moveImages";
-import { slideCurrent } from "./moveImages";
+import { slideCurrent, index } from "./moveImages";
 
 function pullImages(images) {
   console.log("image array");

@@ -11,8 +11,7 @@ function addBtnListeners() {
 
   const dots = document.querySelectorAll(".dot");
   dots.forEach((element) => {
-    let number = element.getAttribute("data");
-    // console.log(number);
+    let number = +element.getAttribute("data");
     element.addEventListener("click", () => slideCurrent(number));
   });
 }
